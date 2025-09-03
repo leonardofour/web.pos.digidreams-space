@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { useRouter, usePathname } from "next/navigation";
 import { useThemeContext } from "@/lib/provider/theme-provider/theme-provider";
 import { useTimerContext } from "@/lib/provider/timer-provider/timer-provider";
@@ -46,7 +46,8 @@ export default function NavBottom() {
   const router = useRouter();
   const pathname = usePathname();
 
-  const tabs = [
+  const tabs = useMemo(
+  () => [
     {
       id: "home",
       label: "Home",
@@ -84,14 +85,18 @@ export default function NavBottom() {
       link: "/pages/more",
       activeIcon: MoreActiveIcon,
     },
-  ];
+  ],
+  [theme] // hanya re-render kalau theme berubah
+);
+
 
   useEffect(() => {
-    const currentTab = tabs.find((tab) => tab.link === pathname);
-    if (currentTab) {
-      setActiveTab(currentTab.id);
-    }
-  }, [pathname]);
+  const currentTab = tabs.find((tab) => tab.link === pathname);
+  if (currentTab) {
+    setActiveTab(currentTab.id);
+  }
+}, [pathname, tabs]);
+
 
   const handleTabClick = (tab: TabType) => {
     if (tab.isModal) {

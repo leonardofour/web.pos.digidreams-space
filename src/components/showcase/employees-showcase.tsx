@@ -1,9 +1,9 @@
 "use client";
 
 import styled from "styled-components";
-import EmployeeShiftDropdown, {
-  Employee,
-  EmployeeData,
+import  {
+  // Employee,
+  // EmployeeData,
 } from "../common/employees/employees";
 import Text from "../common/text/text";
 
@@ -42,50 +42,50 @@ const SectionTitle = styled.div`
 `;
 
 const ExamplePage: React.FC = () => {
-  const employeeData: EmployeeData = {
-    employees: [
-      {
-        id: 1,
-        displayName: "Sarah Johnson",
-        avatar: "https://i.pravatar.cc/40?u=1",
-        shift: "morning",
-      },
-      {
-        id: 2,
-        displayName: "Michael Chen",
-        avatar: "https://i.pravatar.cc/40?u=2",
-        shift: "afternoon",
-      },
-      {
-        id: 3,
-        displayName: "Emma Williams",
-        avatar: "https://i.pravatar.cc/40?u=3",
-        shift: "night",
-      },
-      {
-        id: 4,
-        displayName: "David Rodriguez",
-        avatar: "https://i.pravatar.cc/40?u=4",
-        shift: "morning",
-      },
-      {
-        id: 5,
-        displayName: "Lisa Anderson",
-        avatar: "https://i.pravatar.cc/40?u=5",
-        shift: "afternoon",
-      },
-      {
-        id: 6,
-        displayName: "James Wilson",
-        avatar: "https://i.pravatar.cc/40?u=6",
-        shift: "night",
-      },
-    ],
-  };
+  // const employeeData: EmployeeData = {
+  //   employees: [
+  //     {
+  //       id: 1,
+  //       displayName: "Sarah Johnson",
+  //       avatar: "https://i.pravatar.cc/40?u=1",
+  //       shift: "morning",
+  //     },
+  //     {
+  //       id: 2,
+  //       displayName: "Michael Chen",
+  //       avatar: "https://i.pravatar.cc/40?u=2",
+  //       shift: "afternoon",
+  //     },
+  //     {
+  //       id: 3,
+  //       displayName: "Emma Williams",
+  //       avatar: "https://i.pravatar.cc/40?u=3",
+  //       shift: "night",
+  //     },
+  //     {
+  //       id: 4,
+  //       displayName: "David Rodriguez",
+  //       avatar: "https://i.pravatar.cc/40?u=4",
+  //       shift: "morning",
+  //     },
+  //     {
+  //       id: 5,
+  //       displayName: "Lisa Anderson",
+  //       avatar: "https://i.pravatar.cc/40?u=5",
+  //       shift: "afternoon",
+  //     },
+  //     {
+  //       id: 6,
+  //       displayName: "James Wilson",
+  //       avatar: "https://i.pravatar.cc/40?u=6",
+  //       shift: "night",
+  //     },
+  //   ],
+  // };
 
-  const handleEmployeeSelect = (employee: Employee): void => {
-    console.log("Selected employee:", employee);
-  };
+  // const handleEmployeeSelect = (employee: Employee): void => {
+  //   console.log("Selected employee:", employee);
+  // };
 
   return (
     <PageContainer>
@@ -107,11 +107,11 @@ const ExamplePage: React.FC = () => {
               Basic Usage
             </Text>
           </SectionTitle>
-          <EmployeeShiftDropdown
-            data={employeeData}
+          {/* <EmployeeShiftDropdown
+            // data={employeeData}
             onSelect={handleEmployeeSelect}
             placeholder="Pilih Employee"
-          />
+          /> */}
         </ExampleSection>
       </ContentWrapper>
     </PageContainer>
