@@ -47,31 +47,31 @@ const orderedDishes: Dish[] = [
     name: "Southwest Scramble Bowl",
     image: Order1,
     orders: 26,
-  },
+  } as Dish & {image: any},
   {
     id: "2",
     name: "Hickory Smoked Bacon",
     image: Order2,
     orders: 24,
-  },
+  }as Dish & {image: any},
   {
     id: "3",
     name: "Chicken Tender Plate",
     image: Order3,
     orders: 23,
-  },
+  }as Dish & {image: any},
   {
     id: "4",
     name: "Grilled Chicken Sandwich",
     image: Order4,
     orders: 22,
-  },
+  }as Dish & {image: any},
   {
     id: "5",
     name: "BBQ Bacon Burger",
     image: Order5,
     orders: 22,
-  },
+  }as Dish & {image: any},
 ];
 
 const availableDishes: Dish[] = [
